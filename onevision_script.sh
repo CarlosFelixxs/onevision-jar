@@ -47,3 +47,13 @@ echo "criando o banco de dados"
 sudo docker build -t onevision_img:1.0 .
 echo "executando mysql"
 sudo docker run -d -p 3306:3306 --name onevision onevision_img:1.0
+
+echo "Clonando o repositorio da aplicação OneVision."
+https://github.com/CarlosFelixxs/onevision-jar.git
+echo "Entrando no repositorio do projeto."
+cd onevision-jar
+echo "Executando o jar"
+chmod +x one-vision.jar
+java -jar one-vision.jar 
+echo "jar executado com sucesso."
+
