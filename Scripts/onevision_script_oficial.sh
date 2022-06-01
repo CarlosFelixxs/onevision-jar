@@ -14,6 +14,9 @@ fi
 echo "reiniciando o terminal"
 source "/home/$usuario/.sdkman/bin/sdkman-init.sh"
 
+PURPLE='0;35'
+NC='\033[0m' 
+VERSAO=11
 
 echo  "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Olá Aluno, serei seu assistente para instalação do Java!;"
 sleep 2
@@ -57,9 +60,6 @@ if [ $? -eq 0 ]
 		sleep 1
 	fi
 fi
-echo "atualizando os pacotes"
-sudo apt update && sudo apt upgrade.
-
 
 echo "procurando o docker"
 which docker
@@ -72,19 +72,17 @@ echo "iniciando o docker no sistema"
 sudo systemctl start docker
 sudo systemctl enable docker
 
-
 echo "baixando mysql"
 sudo docker pull mysql:8.0.16
 
 echo && echo "Criando Container Docker OneVision"
 read -p "Press Enter to continue ..."
-docker run -d -p 3306:3306 --name onevision -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=carlos-01212078" -e "MYSQL_PASSWORD=urubu100" mysql
+sudo docker run -d -p 3306:3306 --name onevisionBD -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=root" -e "MYSQL_PASSWORD=urubu100" mysql
 
 echo "Aguarde 20 segundos..."
 sleep 20
-read -p "Press Enter to continue ..."
 
-docker exec -i onevision sh -c 'exec mysql -u root -purubu100 onevision' <"bd-onevision.sql"
+sudo docker exec -it onevisionBD sh -c 'exec mysql -u root -purubu100 onevision' <"bd-onevision.sql"
 
 echo "Clonando o repositorio da aplicação OneVision."
 git clone https://github.com/CarlosFelixxs/onevision-jar.git
