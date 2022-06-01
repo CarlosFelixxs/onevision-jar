@@ -2,7 +2,7 @@ clear
 echo && echo "Criando Container Docker OneVision"
 read -p "Press Enter to continue ..."
 
-docker run -d -p 3310:3306 --name DBOneVision -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=userOneVision" -e "MYSQL_PASSWORD=urubu100" mysql
+docker run -d -p 3306:3306 --name DBOneVision -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=userOneVision" -e "MYSQL_PASSWORD=urubu100" mysql
 
 echo "Aguarde 20 segundos..."
 sleep 20

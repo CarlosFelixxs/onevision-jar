@@ -22,11 +22,11 @@ which java
 if [ $? = 0 ]
 then echo "Já possui java instalado"
 else echo "Instalando java"
-sudo apt install default-jre ; apt install openjdk-11-jre-headless; -y
+sudo apt install default-jre ; apt install openjdk-11-jre-headless;
 fi
 echo "versão do instalada: "
 java -version
-
+s
 echo "procurando o docker"
 which docker
 if [ $? = 0 ]
@@ -46,7 +46,7 @@ sudo docker run -d -p 3306:3306 --name onevisionBD -e "MYSQL_DATABASE =onevision
 sudo docker build -t onevision_img:1.0 .
 
 echo "Clonando o repositorio da aplicação OneVision."
-https://github.com/CarlosFelixxs/onevision-jar.git
+git clone
 echo "Entrando no repositorio do projeto."
 cd onevision-jar
 echo "Executando o jar"

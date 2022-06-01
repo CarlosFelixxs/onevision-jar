@@ -71,9 +71,3 @@ file_sql=$(find *.sql)
 docker exec -i $nomeContainer sh -c 'exec mysql -u'$userBanco' -p'$senhaUserBanco' '$nomeBanco'' <"$dir_atual/$file_sql"
 errorValidationScriptSql
 
-echo
-echo "===  FIM DO SCRIPT 'criar-mysql-docker.sh', OBRIGADO.  ==="
-echo "----------------------------------------------------------"
-echo "===                    CRÉDITOS                        ==="
-echo "===                 Alexandre Gavazzi                  ==="
-echo "----------------------------------------------------------"
