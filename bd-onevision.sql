@@ -1,41 +1,37 @@
 create table maquina(
 idMaquina int not null auto_increment, 
-hostName varchar(50),
+hostName varchar(150),
 primary key(idMaquina)
 );
 
 create table componente(
 idComponente int auto_increment,
-nomeComponente varchar(40),
+nomeComponente varchar(150),
 primary key(idComponente)
 );
 
 create table componenteMaquina(
 idComponenteMaquina int auto_increment,
-totalComponente double,
-unidadeMedida VARCHAR(5),
-fkComponente INT,
+totalComponente varchar(150),
+unidadeMedida varchar(150),
+fkComponente int,
 fkMaquina int,
-foreign key (fkComponente) references componente (idComponente),
-foreign key (fkMaquina) references maquina (idMaquina),
-primary key(idComponenteMaquina, fkMaquina, fkComponente)
+primary key(idComponenteMaquina)
 );
 
 create table programa(
 idPrograma int auto_increment,
-nomePrograma varchar(40),
-isProibido TINYINT,
+nomePrograma varchar(150),
+isProibido varchar(150),
 fkMaquina int,
-foreign key (fkMaquina) references Maquina (idMaquina),
-primary key(idPrograma, fkMaquina)
+primary key(idPrograma)
 );
 
 create table registroPrograma(
 idRegistroPrograma int auto_increment,
-consumoCPU double,
-consumoMemoria double,
-dataHora datetime,
+consumoCPU varchar(150),
+consumoMemoria varchar(150),
+dataHora varchar(150),
 fkPrograma int,
-foreign key (fkPrograma) references programa (idPrograma),
-primary key (idRegistroPrograma, fkPrograma)
+primary key (idRegistroPrograma)
 );
