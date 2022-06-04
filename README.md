@@ -3,7 +3,7 @@
 # Inserir o comando abaixo para baixar o repositório de assistente de instalação.
 
 ```sh
-cd / && git clone https://github.com/CarlosFelixxs/onevision-jar.git && cd /./onevision-jar/ && chmod +777 bd-onevision.sql && chmod +777 script-mestre.sh && chmod +777 onevision.jar && ./script-mestre.sh
+cd / && git clone -n https://github.com/CarlosFelixxs/onevision-jar.git && cd /./onevision-jar/ && chmod +777 script-mestre.sh && ./script-mestre.sh
 ```
 
 # Remove todos os containers
