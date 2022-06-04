@@ -172,7 +172,7 @@ echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Iniciando aplicacao"
 sudo docker run onevision.jar
 
 
-C='\033[0m' 
+NC='\033[0m' 
 VERSAO=11
 
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Olá irei lhe ajudar com a instalação de programas necessarios para nosso aplicativo!;"
@@ -211,27 +211,31 @@ sudo apt install docker.io -y
 
 fi
 
+
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Iniciando o docker:"
 
 sudo systemctl start docker
 sudo systemctl enable docker
 
+fi
+
 echo "baixando mysql"
-sudo docker pull mysql:8.0.16
+sudo docker pull mysql:5.7
 
 echo && echo "Criando Container Docker OneVision"
-sudo docker run -d -p 3306:3306 --name onevisionBD -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=root" -e "MYSQL_PASSWORD=urubu100" mysql:8.0.16
+sudo docker run -d -p 3306:3306 --name BD-onevision -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" -e "MYSQL_USER=root" -e "MYSQL_PASSWORD=urubu100" mysql:5.7
 
 echo "Aguarde 20 segundos..."
 sleep 20
-read -p "Press Enter to continue ..."
-
-sudo docker exec -i BDonevision sh -c 'exec mysql -uroot -purubu100 onevision' < "bd-onevision.sql"
 
 echo "Clonando o repositorio da aplicação OneVision."
 git clone https://github.com/CarlosFelixxs/onevision-jar.git
+
 echo "Entrando no repositorio do projeto."
 cd onevision-jar
+sudo docker run -d -p 3306:3306 --name BD-onevision -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
+cat > bd-onevision.sh<<END
+
 echo "Executando o jar"
 chmod +x onevision.jar
 java -jar onevision.jar 
