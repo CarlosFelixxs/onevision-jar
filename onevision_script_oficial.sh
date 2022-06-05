@@ -82,7 +82,6 @@ sudo docker run -d -p 3309:3306 --name onevisionBD -e "MYSQL_DATABASE=onevision"
 echo "Aguarde 30 segundos..."
 sleep 30
 sudo docker exec -i onevisionBD sh -c 'exec mysql -uroot -purubu100 onevision' <"bd-onevision.sql"
-
 echo "Clonando o repositorio da aplicação OneVision."
 git clone https://github.com/CarlosFelixxs/onevision-jar.git
 echo "Entrando no repositorio do projeto."

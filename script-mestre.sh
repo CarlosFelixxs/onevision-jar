@@ -13,9 +13,9 @@ menu() {
         if [ -e "onevision.jar" ]; then
             echo "  1) INICIAR ONE-VISION   "
             echo "  2) LISTAR CONTAINERS    "
-            echo "  3) EXIBIR LOGS CPU (BANCO LOCAL)  "
-            echo "  4) EXIBIR LOGS RAM (BANCO LOCAL) "
-            echo "  5) EXIBIR LOGS DISCO (BANCO LOCAL) "
+            echo "  3) EXIBIR REGISTRO DOS COMPONENTES (SQL LOCAL)  "
+            echo "  4) EXIBIR REGISTRO DOS PROGRAMAS (SQL LOCAL) "
+            echo "  5) EXIBIR PROGRAMAS REGISTRADOS (SQL LOCAL) "
             echo "  6) CRIAR CONTAINERS "
             echo "  7) REMOVER TODOS OS CONTAINERS "
             echo "  exit) SAIR "
@@ -108,17 +108,32 @@ menu() {
             sudo docker ps
             read -p "Pressione Enter para continuar"
             ;;
-        3) # EXIBIR LOGS DA CPU
+        3)  # REGISTRO DOS COMPONENTES
             clear
-            exit 0
+            echo "-------------------------------------------------------------"
+            echo
+            docker exec -i onevisionBD mysql -uroot -purubu100 onevision -e "select idRegistroComponente as 'ID', dataHora as '=    Data/Hora    =', consumo as '% Uso', fkComponenteMaquina as 'ID Componente(CPU,RAM,DISCO)' from registroComponente order by idRegistroComponente desc;"
+            echo
+            echo "-------------------------------------------------------------"
+            read -p "Pressione Enter para voltar ao menu"
             ;;
-        4) # EXIBIR LOGS DA RAM
+        4) # EXIBIR REGISTRO DOS PROGRAMAS
             clear
-            exit 0
+            echo "-------------------------------------------------------------"
+            echo
+            docker exec -i onevisionBD mysql -uroot -purubu100 onevision -e "select idRegistroPrograma as 'ID', consumoCPU as 'Uso da CPU (Byte)', consumoMemoria as 'Uso da RAM (Byte)', dataHora as '=    Data/Hora    =', fkPrograma as 'ID Programa' from registroPrograma order by idRegistroPrograma desc;"
+            echo
+            echo "-------------------------------------------------------------"
+            read -p "Pressione Enter para voltar ao menu"
             ;;
-        5) # EXIBIR LOGS DO DISCO
+        5) # EXIBIR OS PROGRAMAS REGISTRADOS
             clear
-            exit 0
+            echo "-------------------------------------------------------------"
+            echo
+            docker exec -i onevisionBD mysql -uroot -purubu100 onevision -e "select idPrograma as 'ID', left(nomePrograma,7) as 'Nome P.', isProibido as 'Proib.', fkMaquina as 'ID Maquina' from programa order by idPrograma desc;"
+            echo
+            echo "-------------------------------------------------------------"
+            read -p "Pressione Enter para voltar ao menu"
             ;;
         6) # CRIAR CONTAINERS
             clear
@@ -126,6 +141,7 @@ menu() {
             docker run -d -p 3309:3306 --name onevisionBD -e "MYSQL_DATABASE=onevision" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql
             echo "Aguarde 30 segundos..."
             sleep 30
+            cd /./onevision-jar
             docker exec -i onevisionBD sh -c 'exec mysql -uroot -purubu100 onevision' <"bd-onevision.sql"
             echo "SCRIPT EFETUADO"
             sleep 3
