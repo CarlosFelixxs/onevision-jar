@@ -7,17 +7,18 @@ cd / && git clone -n https://github.com/CarlosFelixxs/onevision-jar.git && cd /.
 ```
 
 # Remove todos os containers
-
+```sh
 docker rm $(docker ps -aq) -f
-
+```
 # Interage com o container via bash
-
-docker exec -it contsmart bash
-
+```sh
+docker exec -it onevisionBD bash
+```
 # Conecta com o mysql local
-
-mysql -h localhost -uroot -proot smart_sac
-
+```sh
+mysql -h localhost -uroot -proot onevision
+```
 # select dos registros
-
-select \* from log_registros;
+```sql
+select * from registroComponente;
+```

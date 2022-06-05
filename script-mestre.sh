@@ -11,17 +11,17 @@ menu() {
         echo "OPCOES: "
         cd /./onevision-jar
         if [ -e "onevision.jar" ]; then
-            echo "  1) INICIAR ONE-VISION   "
-            echo "  2) LISTAR CONTAINERS    "
-            echo "  3) EXIBIR REGISTRO DOS COMPONENTES (SQL LOCAL)  "
-            echo "  4) EXIBIR REGISTRO DOS PROGRAMAS (SQL LOCAL) "
-            echo "  5) EXIBIR PROGRAMAS REGISTRADOS (SQL LOCAL) "
-            echo "  6) CRIAR CONTAINERS "
-            echo "  7) REMOVER TODOS OS CONTAINERS "
-            echo "  exit) SAIR "
+            echo "              1) INICIAR ONE-VISION      "
+            echo "              2) LISTAR CONTAINERS       "
+            echo "      3) EXIBIR REGISTRO DOS COMPONENTES (SQL LOCAL)   "
+            echo "      4) EXIBIR REGISTRO DOS PROGRAMAS (SQL LOCAL)     "
+            echo "      5) EXIBIR PROGRAMAS REGISTRADOS (SQL LOCAL)      "
+            echo "              6) CRIAR CONTAINERS "
+            echo "          7) REMOVER TODOS OS CONTAINERS "
+            echo "                  exit) SAIR "
         else
-            echo "  install) INSTALACAO COMPLETA DO ONE-VISION  "
-            echo "  exit) SAIR "
+            echo "       install) INSTALACAO COMPLETA DO ONE-VISION        "
+            echo "                  exit) SAIR "
         fi
         echo
         echo "Digite uma opcao:"
