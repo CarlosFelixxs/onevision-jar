@@ -19,6 +19,14 @@ fkMaquina int,
 primary key(idComponenteMaquina)
 );
 
+create table registroComponente(
+idRegistroComponente int auto_increment,
+dataHora varchar(150),
+consumo varchar(150),
+fkComponenteMaquina int,
+primary key(idRegistroComponente)
+);
+
 create table programa(
 idPrograma int auto_increment,
 nomePrograma varchar(150),
