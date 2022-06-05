@@ -1,6 +1,30 @@
+create table empresa(
+idEmpresa int primary key auto_increment,
+nome varchar(80),
+cnpj char(14),
+cep char(8),
+numero varchar(45),
+complemento varchar(45),
+email varchar(80),
+senha varchar(50)
+);
+
+create table usuario(
+idUsuario int auto_increment,
+nome varchar(80),
+cpf char(11),
+sn varchar(50),
+email varchar(50),
+senha varchar(50),
+fkEmpresa int,
+primary key(idUsuario)
+);
+
 create table maquina(
 idMaquina int not null auto_increment, 
 hostName varchar(150),
+fkUsuario int,
+fkEmpresa int,
 primary key(idMaquina)
 );
 
