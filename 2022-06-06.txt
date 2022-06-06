@@ -1,0 +1,63 @@
+2022-06-06 00:12:27 INFO com.mycompany.looca.Login Iniciando Programa.
+2022-06-06 00:12:30 INFO com.mycompany.looca.Login Login efetuado com sucesso!
+2022-06-06 00:12:30 INFO com.mycompany.looca.Login Você entrou com o email: funcionario@email.com
+2022-06-06 00:12:32 INFO com.mycompany.looca.Login Ultilizando recursos da Looca API.
+2022-06-06 00:12:35 INFO com.mycompany.looca.Login Dados para o monitoramento coletados com sucesso.
+2022-06-06 00:12:35 INFO com.mycompany.looca.Login O Tamanho da ista de processos é 408
+2022-06-06 00:12:36 INFO com.mycompany.looca.Login Inserindo os dados de componentes da maquina no Azure.
+2022-06-06 00:12:42 INFO com.mycompany.looca.Login O total de processos em execução é 1.
+2022-06-06 00:12:58 INFO com.mycompany.looca.Login O total de processos em execução é 2.
+2022-06-06 00:13:13 INFO com.mycompany.looca.Login O total de processos em execução é 3.
+2022-06-06 00:13:28 INFO com.mycompany.looca.Login O total de processos em execução é 4.
+2022-06-06 00:13:43 INFO com.mycompany.looca.Login O total de processos em execução é 5.
+2022-06-06 00:13:44 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:13:59 INFO com.mycompany.looca.Login O total de processos em execução é 6.
+2022-06-06 00:14:14 INFO com.mycompany.looca.Login O total de processos em execução é 7.
+2022-06-06 00:14:29 INFO com.mycompany.looca.Login O total de processos em execução é 8.
+2022-06-06 00:14:45 INFO com.mycompany.looca.Login O total de processos em execução é 9.
+2022-06-06 00:15:00 INFO com.mycompany.looca.Login O total de processos em execução é 10.
+2022-06-06 00:15:01 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:15:16 INFO com.mycompany.looca.Login O total de processos em execução é 11.
+2022-06-06 00:15:31 INFO com.mycompany.looca.Login O total de processos em execução é 12.
+2022-06-06 00:15:46 INFO com.mycompany.looca.Login O total de processos em execução é 13.
+2022-06-06 00:16:01 INFO com.mycompany.looca.Login O total de processos em execução é 14.
+2022-06-06 00:16:16 INFO com.mycompany.looca.Login O total de processos em execução é 15.
+2022-06-06 00:16:16 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:16:31 INFO com.mycompany.looca.Login O total de processos em execução é 16.
+2022-06-06 00:16:46 INFO com.mycompany.looca.Login O total de processos em execução é 17.
+2022-06-06 00:17:02 INFO com.mycompany.looca.Login O total de processos em execução é 18.
+2022-06-06 00:17:17 INFO com.mycompany.looca.Login O total de processos em execução é 19.
+2022-06-06 00:17:32 INFO com.mycompany.looca.Login O total de processos em execução é 20.
+2022-06-06 00:17:33 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:17:48 INFO com.mycompany.looca.Login O total de processos em execução é 21.
+2022-06-06 00:18:03 INFO com.mycompany.looca.Login O total de processos em execução é 22.
+2022-06-06 00:18:18 INFO com.mycompany.looca.Login O total de processos em execução é 23.
+2022-06-06 00:18:33 INFO com.mycompany.looca.Login O total de processos em execução é 24.
+2022-06-06 00:18:49 INFO com.mycompany.looca.Login O total de processos em execução é 25.
+2022-06-06 00:18:49 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:19:04 INFO com.mycompany.looca.Login O total de processos em execução é 26.
+2022-06-06 00:19:19 INFO com.mycompany.looca.Login O total de processos em execução é 27.
+2022-06-06 00:19:34 INFO com.mycompany.looca.Login O total de processos em execução é 28.
+2022-06-06 00:19:49 INFO com.mycompany.looca.Login O total de processos em execução é 29.
+2022-06-06 00:20:04 INFO com.mycompany.looca.Login O total de processos em execução é 30.
+2022-06-06 00:20:05 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:20:20 INFO com.mycompany.looca.Login O total de processos em execução é 31.
+2022-06-06 00:20:35 INFO com.mycompany.looca.Login O total de processos em execução é 32.
+2022-06-06 00:20:50 INFO com.mycompany.looca.Login O total de processos em execução é 33.
+2022-06-06 00:21:05 INFO com.mycompany.looca.Login O total de processos em execução é 34.
+2022-06-06 00:21:21 INFO com.mycompany.looca.Login O total de processos em execução é 35.
+2022-06-06 00:21:22 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:21:36 INFO com.mycompany.looca.Login O total de processos em execução é 36.
+2022-06-06 00:21:52 INFO com.mycompany.looca.Login O total de processos em execução é 37.
+2022-06-06 00:22:07 INFO com.mycompany.looca.Login O total de processos em execução é 38.
+2022-06-06 00:22:22 INFO com.mycompany.looca.Login O total de processos em execução é 39.
+2022-06-06 00:22:37 INFO com.mycompany.looca.Login O total de processos em execução é 40.
+2022-06-06 00:22:37 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:22:53 INFO com.mycompany.looca.Login O total de processos em execução é 41.
+2022-06-06 00:23:07 INFO com.mycompany.looca.Login O total de processos em execução é 42.
+2022-06-06 00:23:23 INFO com.mycompany.looca.Login O total de processos em execução é 43.
+2022-06-06 00:23:38 INFO com.mycompany.looca.Login O total de processos em execução é 44.
+2022-06-06 00:23:53 INFO com.mycompany.looca.Login O total de processos em execução é 45.
+2022-06-06 00:23:54 INFO com.mycompany.looca.Login A porcentagem de uso da RAM está acima de 60%
+2022-06-06 00:24:09 INFO com.mycompany.looca.Login O total de processos em execução é 46.
+2022-06-06 00:24:24 INFO com.mycompany.looca.Login O total de processos em execução é 47.
